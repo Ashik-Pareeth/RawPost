@@ -2,16 +2,16 @@ import { getAllArticles, getArticleBySlug, getRelatedArticles } from "@/lib/arti
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Breadcrumb from "@/components/Breadcrumb";
+
 import CategoryBadge from "@/components/CategoryBadge";
 import TableOfContents from "@/components/TableOfContents";
 import AuthorBio from "@/components/AuthorBio";
 import RelatedArticles from "@/components/RelatedArticles";
 import ReadingProgress from "@/components/ReadingProgress";
 import NewsletterForm from "@/components/NewsletterForm";
-import { getCategoryBySlug } from "@/lib/categories";
+
 import { formatDate, SITE_NAME, SITE_URL } from "@/lib/utils";
-import { Clock, User } from "lucide-react";
+import { Clock } from "lucide-react";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -60,7 +60,7 @@ export default async function ArticlePage({ params }: Props) {
   const article = getArticleBySlug(slug);
   if (!article) notFound();
 
-  const category = getCategoryBySlug(article.category);
+
   const related = getRelatedArticles(article.slug, article.category);
 
   const articleSchema = {

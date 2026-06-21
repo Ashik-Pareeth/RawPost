@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Article } from "@/lib/articles";
 import { truncate } from "@/lib/utils";
 import CategoryBadge from "@/components/CategoryBadge";
-import { ArrowRight } from "lucide-react";
+
 
 interface RelatedArticlesProps {
   articles: Article[];
