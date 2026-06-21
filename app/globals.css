@@ -335,8 +335,9 @@ a {
 ───────────────────────────────────────────── */
 .article-layout {
   display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 720px) 240px;
+  gap: 5rem;
+  justify-content: center;
   align-items: start;
 }
 

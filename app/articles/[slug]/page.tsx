@@ -99,10 +99,10 @@ export default async function ArticlePage({ params }: Props) {
       />
 
       <div style={{ padding: "2rem 0 5rem" }}>
-        <div className="container-narrow">
+        <div className="container">
 
           {/* Article Header */}
-          <header style={{ marginBottom: "2.5rem", textAlign: "center" }}>
+          <header style={{ marginBottom: "3rem", textAlign: "center", maxWidth: "800px", margin: "0 auto 3rem" }}>
             <div style={{ marginBottom: "1.5rem" }}>
               <CategoryBadge category={article.category} />
             </div>
@@ -160,9 +160,10 @@ export default async function ArticlePage({ params }: Props) {
           {article.coverImage && (
              <div style={{
                width: "100%",
+               maxHeight: "600px",
                aspectRatio: "2/1",
                overflow: "hidden",
-               marginBottom: "3rem",
+               marginBottom: "4rem",
                background: "var(--surface-2)",
                borderBottom: "1px solid var(--text-primary)"
              }}>

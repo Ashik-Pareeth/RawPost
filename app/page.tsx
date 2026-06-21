@@ -58,7 +58,7 @@ export default function HomePage() {
               </h2>
             </div>
             
-            <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+            <div className="articles-grid">
               {latest.map((article) => (
                 <div key={article.slug} style={{ paddingBottom: "2rem", borderBottom: "1px solid var(--border)" }}>
                   <ArticleCard article={article} />
