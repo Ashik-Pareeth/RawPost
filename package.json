@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.9",
     "@tailwindcss/typography": "^0.5.20",
     "date-fns": "^4.4.0",
     "lucide-react": "^0.525.0",
