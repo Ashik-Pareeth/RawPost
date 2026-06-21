@@ -37,6 +37,15 @@ export const categories: Category[] = [
     icon: "🤖",
     metaDescription: "In-depth guides on AI tools, software reviews, and tech news that actually matters for creators and professionals.",
   },
+  {
+    slug: "sports",
+    name: "Sports",
+    description: "In-depth analysis, statistics, and tactical breakdowns of the world's biggest sporting events.",
+    color: "#f97316",
+    accentClass: "orange",
+    icon: "🏆",
+    metaDescription: "Sports analysis, predictions, and in-depth tactical reviews of football, basketball, and major tournaments.",
+  },
 ];
 
 export function getCategoryBySlug(slug: string): Category | undefined {
@@ -47,4 +56,5 @@ export const categoryColorMap: Record<string, string> = {
   "make-money": "#22c55e",
   "productivity": "#3b82f6",
   "tech-ai": "#a855f7",
+  "sports": "#f97316",
 };
