@@ -12,8 +12,14 @@ export default function AuthorBio() {
         height: "80px",
         background: "var(--surface-2)",
         flexShrink: 0,
+        overflow: "hidden"
       }}>
-        {/* Actual image goes here */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img 
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=150&h=150" 
+          alt="Ashik"
+          style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(100%) contrast(1.1)" }}
+        />
       </div>
       <div>
         <h3 style={{
