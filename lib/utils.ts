@@ -43,8 +43,20 @@ export function extractHeadings(content: string): { id: string; text: string; le
 }
 
 export const SITE_NAME = "Raw Post";
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 
-  (process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` : "http://localhost:3000");
+const getBaseUrl = () => {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL.replace(/\/+$/, "");
+  }
+  if (process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.NEXT_PUBLIC_VERCEL_URL) {
+    return `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
+  }
+  return "http://localhost:3000";
+};
+
+export const SITE_URL = getBaseUrl();
 export const SITE_DESCRIPTION = "No fluff. Just results. — Practical guides on making money, productivity, and AI tools.";
 export const AUTHOR_NAME = "Raw Post Team";
 export const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
